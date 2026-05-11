@@ -1,103 +1,126 @@
 console.log('hola desde main')
 
+// Mario
+// Luigi
+// Bowser
+// Toad
+// Peach
+
+let personajes = ['Mario','Luigi','Bowser','Toad','Peach','star']
+
+console.log(personajes)
+
+console.log(personajes[0])
+console.log(personajes[1])
+console.log(personajes[2])
+console.log(personajes[3])
+console.log(personajes[4])
+
+// --i ====> i--
+for(i = personajes.length -1 ; i >= 0; i--){
+    console.log(i)
+    console.log(personajes[i])
+}
+
+console.log(personajes)
+
+// console.log(personajes.reverse())
+// console.log(personajes)
 
 
-// let alumno = 'Benjamin'
-// console.log('Antes de la funcion' + alumno)
-// function saludarAlumno(alumno){
-//     console.log('Dentro de la funcion' + alumno)
-//     console.log('hola '+alumno)
-// }
-// console.log('Despues de la funcion' + alumno)
-
-// saludarAlumno('Jack')
 
 
 
-// function transportar(origen,destino){
-//     console.log('saliendo de' , origen)
-//     console.log('transportandome')
-//     console.log('llegando a ' + destino)
-// }
-
-// transportar('casa','gimnasio')
-// transportar('gimnasio','ofi')
-// transportar('ofi','casa')
 
 
-// function sumar(num1,num2){
-//     return num1 + num2    
-// }
 
-// console.log(sumar(2,2))
 
-// function autorizarEntrada(edad){
-//     if(edad > 18){
-//         return 'Puedes entrar'
-//     }
-//     console.log('me imprimo')
-//     return 'No entras te queda afuera'
+
+
+
+
+
+
+let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+console.log(numbers[0])
+console.log(numbers[3])
+console.log(numbers[6])
+/// i = i + 3 =====> i+=3
+/// i = i + 1 =====> i++
+for(i=0; i <= 19 ;i+=3){
+    console.log(numbers[i])
+}
+
+
+
+let personajesBuenos = []
+for(i=0;i< personajes.length; i++){
+    if(personajes[i] != 'Bowser'){
+        personajesBuenos.push(personajes[i])
+    }
+}
+
+
+
+console.log(personajes)
+console.log(personajesBuenos)
+console.log(personajes.filter( (personaje)=> personaje != 'Bowser' ))
+console.log(personajes)
+
+
+
+
+let favNumbers = []
+
+for(i=0;i<numbers.length; i++){
+    if( i < 14 ){
+        favNumbers.push(numbers[i])
+    }
+
+}
+
+console.log(numbers)
+console.log(favNumbers)
+// let newNumbers = numbers.filter( (number)=> number <=14)
+console.log(numbers.filter( (number)=> number <=14))
+console.log(numbers.filter( (number)=> number != 7))
+console.log(numbers.filter( (number)=> number > 7))
+console.log(numbers.filter( (number)=> number > 7 && number <=14))
+
+console.log(numbers.filter( (number)=> number%3 == 0))
+
+let newNumbers = []
+for(i=0; i < numbers.length; i++){
+    newNumbers.push(numbers[i]  * 4)
     
-// }
-
-// console.log(autorizarEntrada(15))
-
-
-
-
-function calculoImpuesto(ingreso){
-    console.log('Debes pagar '+ ingreso*0.2)
-    return ingreso * 0.2
 }
 
-let result = calculoImpuesto(10000)
+console.log(numbers)
+console.log(newNumbers)
 
-document.getElementById('resultado').innerHTML = result
+// let mapNumbers = 
+console.log( numbers.map( (numero)=> numero * 4 )  )
 
+console.log( personajes.map( (personaje)=> personaje + 's' ))
 
-// function sumar(num1,num2){
-//     return num1 + num2
-// }
+personajes.forEach( (character)=>{
+    console.log(character + 's')
+})
 
-// console.log(sumar(2,2))
-// console.log(sumar(1,8))
-// console.log(sumar(0,3))
-// console.log(sumar(8,2))
-
-
-
-// console.log('Antes de Window on load')
-// window.onload = function(){
-//     console.log('DENTRO de Window on load')
-// }
-// console.log('Despues de Window on load')
-
-
-// Funcion declarativa
-saludoDeclarativo()
-function saludoDeclarativo(){
-    console.log('saludoDeclarativo')
+for(i=0;i < personajes.length; i++){
+    console.log(personajes[i] + 's')
 }
 
-// Función de expresión
-const saludoExpresión = function(){
-    console.log('saludoExpresión')
+console.log('DO while')
+
+let j = 20
+do{
+    console.log(j)
+    j++
+} while(j < 10)
+
+console.log('For')
+for(i=20;i < 10; i++){
+    console.log(i)
 }
-saludoExpresión()
-
-// Función Flecha Arrow
-const saludoArrow = ()=>{
-    console.log('saludoArrow')
-}
-saludoArrow()
-
-///// Refactoring ////
-
-// PSEDUDO CODIGO
-// Desarrollar un generador de excusas de Quien, Cuando , que , Accion
-// 1. modificar html desde js
-// 2. tomar array who y obtner un elemento aleatorio
-// 3. tomar array what y obtner un elemento aleatorio
-// 4. tomar array when y obtner un elemento aleatorio
-// 5. tomar array action y obtner un elemento aleatorio
-// 6. unir los vlaores alaetorios en una excusa
